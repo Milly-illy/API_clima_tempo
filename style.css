@@ -1,3 +1,4 @@
+/* Define estilos para todos os elementos */
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +8,7 @@
     font-family: "Krub";
   }
   
+  /* Estilo para o vídeo de fundo */
   .video-container {
     position: fixed;
     top: 0;
@@ -23,6 +25,7 @@
     opacity: 0.5;
   }
   
+  /* Estilo gerais do corpo da página */
   body {
     height: 100vh;
     background-color: #fdfdfd;
@@ -31,6 +34,7 @@
     background-repeat: no-repeat;
   }
   
+  /* Estilo para o cabeçalho da página */
   .main-header-nav {
     display: flex;
     justify-content: space-around;
@@ -40,28 +44,32 @@
     background-color: #0d5782;
     position: relative;
   }
+  /* Estilo para o título do cabeçalho */
   .main-header-nav-title {
     display: flex;
     justify-content: space-around;
     align-items: end;
   }
+  /* Estilo para o texto "WEATHER" no cabeçalho */
   .main-header-nav-title-weather {
     font-family: "Krona One";
     color: #fdfdfd;
     font-size: 50px;
     padding: 0 10px 0 0;
   }
+  /* Estilo para o texto "WISE" no cabeçalho */
   .main-header-nav-title-wise {
     font-family: "Krub";
     color: #fdfdfd;
     font-size: 40px;
   }
+  /* Estilos para o logotipo no cabeçalho */
   .main-header-nav-logo {
     width: 140px;
     position: relative;
     margin-top: 70px;
   }
-  
+  /* Estilo para a seção principal de consulta da cidade */
   .main-city {
     display: flex;
     flex-direction: column;
@@ -70,18 +78,21 @@
     margin-top: 60px;
     position: relative;
   }
+  /* Estilo para o título da seção de consulta da cidade */
   .main-city h3 {
     color: #0a4363;
     font-weight: 500;
     font-size: 25px;
     font-style: inherit;
   }
+  /* Estilo para o formulário de consulta da cidade */
   .main-city-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
   }
+  /* Estilo para o campo de entrada de cidade no formulário */
   .main-city-form input {
     padding-left: 20px;
     width: 700px;
@@ -89,6 +100,7 @@
     border-radius: 50px;
     background-color: #d9d9d9;
   }
+  /* Estilo para o botão de consulta no formulário */
   .main-city-form button {
     width: 100px;
     height: 50px;
@@ -96,13 +108,13 @@
     margin-left: 10px;
     background-color: #d9d9d9;
   }
-  
+  /* Estilo para a seção de exibição do clima */
   .main-clima {
     display: flex;
     justify-content: center;
     position: relative;
   }
-  
+  /* Estilo para a div de resultados do clima */
   #climaResult {
     margin-top: 4rem;
     display: none;
@@ -114,7 +126,7 @@
     box-shadow: 0px 0px 20px #0a4363;
     padding: 20px;
   }
-  
+  /* Estilo para o nome da cidade na exibição do clima */
   .clima-city-name {
     display: flex;
     text-align: center;
@@ -123,6 +135,7 @@
     font-weight: 600;
     text-shadow: 0px 0px 5px #fdfdfd;
   }
+  /* Estilo para a temperatura na exibição do clima */
   .clima-city-temp {
     display: flex;
     justify-content: center;
@@ -131,6 +144,7 @@
     padding: 30px;
     font-size: 50px;
   }
+/* Estilo para o ícone do clima na exibição do clima */
   .clima-city-icon {
     display: flex;
     text-align: center;
@@ -139,6 +153,7 @@
     font-weight: 700;
     font-size: 20px;
   }
+  /* Estilos para a seção de informações adicionais do clima */
   .clima-city-bot {
     display: flex;
     align-items: center; /* Alinha os itens verticalmente no centro */
@@ -154,23 +169,24 @@
     align-items: center; /* Alinha os itens verticalmente no centro */
     margin-top: 30px;
   }
-  
+  /* Estilo para os elementos de espaçamento */
   .espacamento {
     margin: 0 10px; /* Adiciona espaçamento horizontal entre os elementos */
     margin-top: 30px;
   }
-  
+  /* Estilo para a bandeira da cidade */
   .flag-city {
     width: 40px;
     margin: 0 15px;
   }
-  
+  /* Estilos para o ícone de mapa */
   #pin_map {
     position: relative;
     margin-left: 15px;
     margin-top: 3px;
   }
   
+  /*O media usamos para configurar algumas programações para um tamanho de tela que você queira*/
   @media (max-width: 815px) {
     .main-city-form input {
       width: 500px;

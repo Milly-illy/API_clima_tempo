@@ -1,19 +1,19 @@
 document
-  .getElementById("formClima")
+  .getElementById("formClima") //Seleciona o forms que fizemos no index.html
   .addEventListener("submit", function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
 
-    const city = document.getElementById("cityInput").value;
-    const cidadeFormatada = city.charAt(0).toUpperCase() + city.slice(1);
+    const city = document.getElementById("cityInput").value; // Obtém o valor inserido no campo de entrada de cidade
+    const cidadeFormatada = city.charAt(0).toUpperCase() + city.slice(1); // Formata o nome da cidade para ter a primeira letra maiúscula
 
-    fetch(`http://localhost:3000/climatempo/${city}`)
-      .then((response) => response.json())
-      .then((data) => {
-        const tempoResult = document.getElementById("climaResult");
+    fetch(`http://localhost:3000/climatempo/${city}`) // Faz uma requisição para a rota do servidor que consulta o clima da cidade
+      .then((response) => response.json()) // Converte a resposta para JSON
+      .then((data) => { // Manipula os dados retornados pela API
+        const tempoResult = document.getElementById("climaResult");  // Seleciona a div onde os resultados serão exibidos
 
         document.getElementById("climaResult").style.display = "block";
 
-        if (data.Temperatura) {
+        if (data.Temperatura) { // Verifica se os dados de temperatura foram recebidos
           tempoResult.innerHTML = `
             
           <div class="clima-city-name">
@@ -43,7 +43,7 @@ document
         
             `;
         } else {
-          tempoResult.innerHTML = "Erro ao obter dados metereológicos!";
+          tempoResult.innerHTML = "Erro ao obter dados metereológicos!"; // Exibe uma mensagem de erro caso os dados não forem recebidos
         }
       });
   });
